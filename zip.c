@@ -90,11 +90,7 @@ int zip(in, out)
     }
     header_bytes = (off_t)outcnt;
 
-#ifdef IBM_Z_DFLTCC
-    dfltcc_deflate (level);
-#else
-    deflate (level);
-#endif
+    deflate_inaccel(level);
 
 #ifndef NO_SIZE_CHECK
   /* Check input size

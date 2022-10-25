@@ -327,3 +327,5 @@ extern int inflate (void);
 extern int dfltcc_deflate (int pack_level);
 extern int dfltcc_inflate (void);
 #endif
+
+extern size_t deflate_inaccel (int pack_level);

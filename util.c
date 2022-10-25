@@ -152,14 +152,12 @@ getcrc (void)
   return crc ^ 0xffffffffL;
 }
 
-#ifdef IBM_Z_DFLTCC
 /* Set a new CRC value.  */
 void
 setcrc (ulg c)
 {
   crc = c ^ 0xffffffffL;
 }
-#endif
 
 /* ===========================================================================
  * Clear input and output buffers
